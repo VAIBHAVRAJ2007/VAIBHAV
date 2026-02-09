@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Marks Check</title>
+</head>
+
+<body>
+    <form>
+        <label for="marks">Marks:</label>
+        <input type="text" id="marks"><br><br>
+        <button onclick="pass()">Position Check</button>
+    </form>
+    <script>
+        function pass() {
+            var m = document.getElementById("marks").value;
+            if (m >= 300)
+                document.write("first position")
+            else if (m >= 250 && m <= 300)
+                document.write("second position")
+            else if (m >= 160 && m <= 250)
+                document.write("third position")
+            else
+                document.write("failed")
+        }
+    </script>
+</body>
+
+</html>

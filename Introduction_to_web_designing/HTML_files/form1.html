@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Conference Proposal</title>
+    </head>
+    <body>
+        <form>
+            <fieldset>
+                <legend style="color: magenta;">Conference Proposal Form</legend>
+                First Name:
+                <input type="text" name="Fname" placeholder="Enter Your First Name " required/>
+                <br>
+                <br>
+                Middle Name:
+                <input type="text" name="Mname" placeholder="Enter Your Middle Name " />
+                <br>
+                <br>
+                Last Name:
+                <br>
+                <br>
+                <input type="text" name="Lname" placeholder="Enter Your Last Name " required/>
+                <br>
+                <br>
+                Gender:
+                <input type="radio" name="gender" value="male">Male
+                <input type="radio" name="gender" value="female">Female
+                <input type="radio" name="gender" value="other">Other <br><br>
+                
+                DOB:
+                <input type="date" name="date">
+                <br>
+                <br>
+                Job Title:
+                <br>
+                <br>
+                <input type="text" name="Job Title" placeholder="Enter Job Title"/>
+                <br>
+                <br>
+                Biography
+                <br>
+                <br>
+                <textarea name="biography" placeholder="Enter your biography details">My-Life-My-Rule</textarea>
+                <br>
+                <br>
+                Proposal Title
+                <br>
+                <br>
+                <input type="text" name="proposal title" placeholder="Proposal Title"/>
+                <br>
+                <br>
+                Abstract
+                <br>
+                <br>
+                <textarea name="Abstract" placeholder="Enter Abstract"></textarea>
+                <br>
+                <br>
+                Topics
+                <br>
+                <br>
+                <input type="checkbox" name="Topics[]">Topic1
+                <br>
+                <br>
+                <input type="checkbox" name="Topics[]">Topic2
+                <br>
+                <br>
+                <input type="checkbox" name="Topics[]">Topic3
+                <br>
+                <br>
+                Session type
+                <br>
+                
+                <select name="Session type">
+                    
+                    <option value="Select Type">-Select-</option>
+                    <optgroup label="Session Types">
+                        <option value="panel">Panel</option>
+                        <option value="work">Work shop</option>
+                        <option value="presentation">Presentation</option>
+                        <option value="other">Other</option>
+                    </optgroup>
+                </select>
+                <br>
+                <br>
+                Audience Level
+                <br>
+                
+                <select name="Audience level">
+                    <option value="select level" >-Select-</option>
+                    <optgroup label="Audience Level">
+                        <option value="Nov">Novice</option>
+                        <option value="Int">Intermediate</option>
+                        <option value="Exp">Expert</option>
+                    </optgroup>
+                </select>
+                <br>
+                <br>
+                Image
+                <br>
+                
+                <input type="file" name="image">
+                <br>
+                <br>
+                Additional Information
+                <br>
+                
+                <textarea name="add info" placeholder="Enter Information">Hi</textarea>
+                <br>
+                <br>
+                <input type="submit" 
+                value="Submit"/>
+                <input type="reset" value="Reset"/>
+            </fieldset>
+        </form>
+    </body>
+</html>

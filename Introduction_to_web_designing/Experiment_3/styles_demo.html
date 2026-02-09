@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Multiple Styles</title>
+    <link rel="stylesheet" href="styles.css"> <!-- external -->
+    <style>
+        /* internal */
+        h1 {
+            letter-spacing: .5px
+        }
+
+        .accent {
+            color: #005bbb
+        }
+    </style>
+</head>
+
+<body>
+    <h1 class="accent">CSS Types in Single Page</h1>
+    <p class="card" style="border-left:6px solid #005bbb"> <!-- inline -->
+        This paragraph uses inline, internal, and external CSS.
+    </p>
+</body>
+
+</html>

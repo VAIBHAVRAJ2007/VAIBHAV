@@ -1,0 +1,46 @@
+# depslib dependency file v1.0
+1735744461 source:c:\my code\wscubetech1\main.c
+	<stdio.h>
+
+1730370692 source:c:\my code\wscubetech1\new main.c
+	<stdio.h>
+
+1730734591 c:\my code\wscubetech1\demofile.h
+	<stdio.h>
+
+1730732286 source:c:\my code\wscubetech1\include.c
+	<stdio.h>
+
+1730732554 source:c:\my code\wscubetech1\joker.c
+	<stdio.h>
+
+1730733558 c:\my code\wscubetech1\demo_file.c
+
+1730734107 source:c:\my code\wscubetech1\demo_file.c
+	"stdio.h"
+
+1730734421 c:\my code\wscubetech1\demofile.c
+	"stdio.h"
+
+1735744504 source:c:\my code\wscubetech1\second.c
+
+1735276701 source:c:\my code\wscubetech1\varibles.c
+	<stdio.h>
+
+1735277047 source:c:\my code\wscubetech1\variables.c
+	<stdio.h>
+
+1736662330 source:c:\c programmes\wscubetech1\gogo.c
+
+1736662126 source:c:\c programmes\wscubetech1\second.c
+
+1736663071 source:c:\c programmes\wscubetech1\main.c
+	<stdio.h>
+
+1736662330 source:c:\users\hp\onedrive\desktop\vaibhav\c programmes\wscubetech1\gogo.c
+
+1736662126 source:c:\users\hp\onedrive\desktop\vaibhav\c programmes\wscubetech1\second.c
+
+1736828560 source:c:\users\hp\onedrive\desktop\vaibhav\c programmes\wscubetech1\main.c
+	<stdio.h>
+

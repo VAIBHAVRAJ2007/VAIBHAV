@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Block,Inline,Inline-block</title>
+    <style>
+        .block {
+            display: block;
+            background-color: aquamarine;
+            
+            /* margin: 5px; */
+            padding: 5px;
+            text-align: center;
+            align-content: center;
+        }
+
+        .inline {
+            display: inline;
+            background-color: aquamarine;
+            /* margin: 2px; */
+            padding: 15px;
+            text-align: center;
+            align-content: center;
+        }
+
+        .inline-block {
+            display: inline-block;
+            background-color: aquamarine;
+            height: 50px;
+            width: 80px;
+            /* margin: 2px; */
+            padding: 5px;
+            text-align: center;
+            align-content: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Display:Block</h2>
+    <p>Each block takes the full line.</p>
+    <div class="block">Block1</div>
+    <div class="block">Block2</div>
+    <div class="block">Block3</div>
+
+    <h2>Display:Inline</h2>
+    <p>Inline boxes sit side by side.</p>
+    <div class="inline">Block1</div>
+    <div class="inline">Block2</div>
+    <div class="inline">Block3</div>
+
+    <h2>Display:Inline-Block</h2>
+    <p>Inline-Block boxes sit next to each other.</p>
+    <div class="inline-block">Block1</div>
+    <div class="inline-block">Block2</div>
+    <div class="inline-block">Block3</div>
+</body>
+
+</html>

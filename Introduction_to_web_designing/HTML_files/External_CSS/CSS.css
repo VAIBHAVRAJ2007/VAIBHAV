@@ -1,0 +1,59 @@
+body{
+    background: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThL82htOP2dMNBNiNGMzr1CZa7YuQow3NTXA&s) no-repeat ;
+    background-size: cover;
+}
+.hero {
+    margin: 100px;
+    padding: 42px 50px;
+    text-align: center;
+    /* background-color:rgb(7, 145, 199); */
+
+}
+
+.hero-title {
+    /* background-color: #dc0707; */
+    margin: 1px;
+    padding: 20px;
+    color: rgb(19, 48, 104);
+    font-family: Cochin;
+    font-style: italic;
+}
+
+.hero-content {
+    margin: 1px;
+    padding: 20px;
+    /* border: 2px solid blue; */
+    /* background-color: #dc0707; */
+    color: hsl(0, 100%, 70%);
+    font-size: 25px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    word-spacing: 1px;
+    letter-spacing: 0.5px;
+    /* justify-content: center; */
+}
+
+.btn {
+    background-color:transparent;
+    display: inline-block;
+    color: hsla(21, 98%, 48%, 0.846);
+    font-size: 1.5rem;
+    text-decoration: none;
+    font-weight: 900;
+    padding: 15px;
+    margin: 1px;
+    word-spacing: 2px;
+    transition: 0.5s;
+    border-radius: 25px;
+}
+
+.btn:hover {
+    display: inline-block;
+    background-color: brown;
+    border-radius: 25px;
+    transform: scale(1.05);
+    transition: 0.5s;
+    color: rgb(16, 167, 39);
+    font-size: 1.5rem;
+    word-spacing: 2px;
+    font-weight: 900;
+}

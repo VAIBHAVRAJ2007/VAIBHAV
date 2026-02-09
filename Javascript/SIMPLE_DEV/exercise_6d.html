@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+</head>
+
+<body>
+    Age: <input type="text" id="age">
+    <br>
+    <br>
+    Date: <input type="text" id="day">
+    <button onclick="pass()">Check Discount</button>
+    <h2 id="display"></h2>
+    <script>
+        function pass() {
+            let Holiday;
+            let age = document.getElementById("age").value;
+            let day=document.getElementById("day").value;
+            if(day==7 || day==14 || day==21||day==28){
+                Holiday=true;
+            }
+            if (!Holiday && (age <= 6 || age >= 65)) {
+                document.getElementById("display").innerText = "Discount";
+            }
+            else {
+                document.getElementById("display").innerText = "No discount";
+            }
+        }
+    </script>
+</body>
+
+</html>

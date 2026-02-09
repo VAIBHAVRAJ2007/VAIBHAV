@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Booleans</title>
+        <style>
+            *{
+                padding: 0;
+                margin: 0;
+            }
+            #demo{
+                background-color: aqua;
+                text-align: center;
+                border: 5px dashed green  ;
+                border-radius: 5px;
+                color: red;
+                margin: 1%;
+                padding: 4px;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- <div id="demo"></div>
+        <p></p> -->
+        <script>
+        //     true
+        //     false
+        //     console.log(2 !== 8);
+        //     console.log(2 === '2.0');
+        //     console.log(2 !== '2');
+
+        //     if (5>2){
+        //         console.log("HELLO");
+        //     }
+        //     else{
+        //         console.log("WORLD");
+        //     }
+
+        //     if (30 > 18) {
+        //         console.log('You can drive.')
+        //     }
+        //     else if(12 > 14) {
+        //         console.log("Almost there");
+        //     }
+        //     else{
+        //         console.log("You can't drive");
+        //     }
+        //    console.log(true && true);   
+        //    console.log(true > false);
+        //    console.log(!true);
+        //     let age=2;
+        //     if(age>18)
+        //     console.log("you can drive ");
+        //     else
+        //     document.write("you can't drive");
+        //     console.log(2==='2');
+        //     // alert(5**3);
+        //    document.write(true && false);  
+        //    let canvote=(age>=18)?'yes':'no';
+        //    console.log(canvote);
+
+        // document.getElementById("demo").innerHTML="<p>Hello World!!</p>";
+        /*let cart='';
+        if(cart){
+            document.write("True");
+        }
+        else{
+            document.write("False");
+            document.write("<br>");
+        }
+        let value=5**3+null;
+        document.write('hello'/5);
+        document.write("<br>");
+        document.write(value);*/
+
+        // var result = 5<<4 ? 'hello' : 'world';
+        // document.write(result);
+        // document.write("<br>");
+        // document.write(5<<5);
+
+            // shortcuts for if - statements
+        const result = 5>4 ?'hello ':'world ';
+        document.write(result);
+
+        const message = 5>1 && 4>1;
+        document.write(message);
+
+        const message1 = 41>47 || 55 !== "55";
+        document.write(message1);
+
+        let currency;
+        if(!1)
+        {
+            currency='USD';
+        }
+        console.log(currency);
+        </script>
+    </body>
+</html>

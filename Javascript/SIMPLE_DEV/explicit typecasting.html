@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
+    <title>javascript</title>
+</head>
+
+<body>
+    <script>
+
+        //Using String
+        let num = 123;
+        document.write(String(num),"<br>"); // "123"
+        document.write(String(true),"<br>"); // "true"
+        document.write(String(null),"<br>"); // "null"
+        document.write(String(undefined),"<br>"); // "undefined"
+
+        //Using toString
+
+        document.write(typeof((num).toString()),"<br>");
+
+        //using Number
+        document.write(Number("123"),'<br>'); // 123
+        document.write(Number("123abc"),'<br>'); // NaN (Not a Number)
+        document.write(Number(true),'<br>'); // 1
+        document.write(Number(false),'<br>'); // 0
+        document.write(Number(null),'<br>'); // 0
+        document.write(Number(undefined),'<br>'); // NaN
+        document.write(Boolean(1),'<br>'); // true
+        document.write(Boolean(0),'<br>'); // false
+        document.write(Boolean(""),'<br>'); // false (Empty string is false)
+        document.write(Boolean("hello"),'<br>'); // true (Non-empty string is true)
+        document.write(Boolean(null),'<br>'); // false
+        document.write(Boolean(undefined)); // false
+    </script>
+</body>
+
+</html>

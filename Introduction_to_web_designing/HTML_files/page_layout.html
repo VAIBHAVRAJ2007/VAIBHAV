@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>WEBPAGE LAYOUT</title>
+    <style>
+        .header{
+            margin: auto;
+            text-align: center; 
+            color:black;background-color:darkgoldenrod;
+        }
+        .navigation{
+            text-align: center; background-color: cadetblue;margin: auto;color:black
+        }
+        #main_div{
+             height: 106px;text-align: center;color:black;
+        }
+        #first_div{
+            float: left; width: 50%;height: 90px;
+        }
+        #section{
+            background-color:chartreuse;align-items:center; height: 50px;border:2px solid red;display:grid;
+        }
+        #article{
+            background-color: deeppink; align-items:center; height: 50px;display:grid;border: 2px solid yellow;
+        }
+        #second_div{
+            background-color:burlywood;float: left;width: 50%;height: 106px;
+        }
+        .aside{
+            background-color: blueviolet;align-items:center; height: 104px;display:grid;border: 2px solid white;
+        }
+        #footer{
+            background-color: blue; text-align: center;margin: auto;color:bisque;border: 2px solid red;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">Welcome to WSCube Tech</header>
+
+    <nav class="navigation">Home | About | Contact Us</nav>
+
+    <div id="main_div">
+        <div id="first_div">
+            <section id="section">Section</section>
+            <article id="article" >Article</article>
+        </div>
+        <div id="second_div">
+            <aside class="aside">Aside</aside></div>
+    </div>
+
+    <footer id="footer">Footer</footer>
+</body>
+</html>

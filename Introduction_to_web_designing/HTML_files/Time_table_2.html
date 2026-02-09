@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Timetable_2</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: #f8f9fa;
+            margin: 0;
+            padding: 20px;
+        }
+        h2 {
+            text-align: center;
+            color: #2d3e50;
+            margin-bottom: 10px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 13px;
+            background: #fff;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+            margin: 0 auto;
+        }
+        caption {
+            caption-side: top;
+            font-size: 1.2em;
+            margin-bottom: 8px;
+            color: #444;
+            font-weight: bold;
+        }
+        thead th {
+            background: #e3e6f0;
+            color: #6d2c91;
+            border: 1px solid #bdbdbd;
+            padding: 8px 4px;
+        }
+        th, td {
+            border: 1px solid #bdbdbd;
+            padding: 7px 4px;
+            text-align: center;
+            font-weight: 500;
+        }
+        tbody tr:nth-child(even) {
+            background: #f6f6fa;
+        }
+        tbody tr:hover {
+            background: #ffe6f2;
+        }
+        sub, sup {
+            color: #888;
+            font-size: 0.9em;
+        }
+        @media (max-width: 900px) {
+            table, thead, tbody, th, td, tr {
+                display: block;
+            }
+            thead tr {
+                display: none;
+            }
+            tr {
+                margin-bottom: 1em;
+                border-bottom: 2px solid #e3e6f0;
+            }
+            td {
+                border: none;
+                position: relative;
+                padding-left: 50%;
+                text-align: left;
+                min-height: 40px;
+            }
+            td:before {
+                position: absolute;
+                left: 10px;
+                top: 7px;
+                width: 45%;
+                white-space: pre-wrap;
+                font-weight: bold;
+                color: #6d2c91;
+            }
+            /* Add content for each column */
+            td:nth-of-type(1):before { content: "Day"; }
+            td:nth-of-type(2):before { content: "1\n9:50 - 10:35"; }
+            td:nth-of-type(3):before { content: "2\n10:35 - 11:20"; }
+            td:nth-of-type(4):before { content: "SHORT BREAK\n11:20 - 11:25"; }
+            td:nth-of-type(5):before { content: "3\n11:25 - 12:10"; }
+            td:nth-of-type(6):before { content: "4\n12:10 - 12:55"; }
+            td:nth-of-type(7):before { content: "SHORT BREAK\n12:55 - 1:00"; }
+            td:nth-of-type(8):before { content: "4A\n1:00 - 1:45"; }
+            td:nth-of-type(9):before { content: "5\n1:45 - 2:30"; }
+            td:nth-of-type(10):before { content: "SHORT BREAK\n2:30 - 2:35"; }
+            td:nth-of-type(11):before { content: "6\n2:35 - 3:20"; }
+            td:nth-of-type(12):before { content: "7\n3:20 - 4:05"; }
+        }
+    </style>
+</head>
+<body>
+    <h2>2SEM CSE</h2>
+    <table>
+        <caption>Weekly Class Timetable</caption>
+        <thead>
+            <tr>
+                <th>Day</th>
+                <th>1 <br>9:50 - 10:35</th>
+                <th>2 <br>10:35 - 11:20</th>
+                <th>SHORT BREAK <br>11:20 - 11:25</th>
+                <th>3 <br>11:25 - 12:10</th>
+                <th>4 <br>12:10 - 12:55</th>
+                <th>SHORT BREAK <br>12:55 - 1:00</th>
+                <th>4A <br>1:00 - 1:45</th>
+                <th>5 <br>1:45 - 2:30</th>
+                <th>SHORT BREAK <br>2:30 - 2:35</th>
+                <th>6 <br>2:35 - 3:20</th>
+                <th>7 <br>3:20 - 4:05</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Mon</td>
+                <td>2CSE-Sports/Yoga/NSS <sub>MG-RK</sub></td>
+                <td>2CSE-100215 Engg.Chem <sub>CHEM-HS</sub></td>
+                <td rowspan="6"></td>
+                <td>2CSE-100215 Engg.Chem <sub>CHEM-HS</sub></td>
+                <td>2CSE-100216 CE <sub>ENG-PKJ</sub></td>
+                <td rowspan="6"></td>
+                <td></td>
+                <td>2CSE-100219 IWD <sub>CSE-Pallavi</sub></td>
+                <td rowspan="6"></td>
+                <td>2CSE-100219 IWD <sub>CSE-Pallavi</sub></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Tue</td>
+                <td>2CSE-100215 Engg.Chem <sub>CHEM-HS</sub></td>
+                <td>2CSE-100218 PP <sub>CSE-VK</sub></td>
+                <td>2CSE-100218 PP <sub>CSE-VK</sub></td>
+                <td>2CSE-100216 CE <sub>ENG-PKJ</sub></td>
+                <td></td>
+                <td><sup>Group-1</sup>
+                    2CSE-100215P Engg. Chem LAB
+                    <sub>CHEM-LAL/HS</sub><br><br><br><sup>Group-2</sup>
+                    2CSE-CE LAB <sub>ENG-PKJ</sub> <br>
+                </td>
+                <td><sup>Group-1</sup>
+                    2CSE-100215P Engg. Chem LAB
+                    <sub>CHEM-LAL/HS</sub><br><br><br><sup>Group-2</sup>
+                    2CSE-CE LAB <sub>ENG-PKJ</sub> <br>
+                </td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Wed</td>
+                <td>2CSE-100215 Engg.Chem <sub>CHEM-HS</sub></td>
+                <td>2CSE-100218 PP <sub>CSE-VK</sub></td>
+                <td>2CSE-100218 PP <sub>CSE-VK</sub></td>
+                <td>2CSE-100219 IWD <sub>CSE-Pallavi</sub></td>
+                <td></td>
+                <td>2CSE-105202 MATH II(P&amp;S) <sub>MAT-RR</sub></td>
+                <td>2CSE-105202 MATH II(P&amp;S) <sub>MAT-RR</sub></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Thu</td>
+                <td>2CSE-100215 Engg.Chem <sub>CHEM-HS</sub></td>
+                <td>2CSE-100218P PP LAB <sub>CSE-OPS</sub></td>
+                <td>2CSE-100218P PP LAB <sub>CSE-OPS</sub></td>
+                <td>2CSE-100215 Engg.Chem <sub>CHEM-HS</sub></td>
+                <td></td>
+                <td>2CSE-105219 IWD LAB <sub>CSE-Pallavi</sub></td>
+                <td>2CSE-105219 IWD LAB <sub>CSE-Pallavi</sub></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Fri</td>
+                <td>2CSE-100216 CE <sub>ENG-PKJ</sub></td>
+                <td>2CSE-100215 Engg.Chem <sub>CHEM-HS</sub></td>
+                <td>2CSE-105202 MATH II(P&amp;S) <sub>MAT-RR</sub></td>
+                <td>2CSE-100219 IWD <sub>CSE-Pallavi</sub></td>
+                <td></td>
+               <td><sup>Group-2</sup>
+                    2CSE-100215P Engg. Chem LAB
+                    <sub>CHEM-LAL/HS</sub><br><br><br><sup>Group-1</sup>
+                    2CSE-CE LAB <sub>ENG-PKJ</sub> <br>
+                </td>
+                <td><sup>Group-2</sup>
+                    2CSE-100215P Engg. Chem LAB
+                    <sub>CHEM-LAL/HS</sub><br><br><br><sup>Group-1</sup>
+                    2CSE-CE LAB <sub>ENG-PKJ</sub> <br>
+                </td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Sat</td>
+                <td>2CSE-105202 MATH II(P&amp;S) <sub>MAT-RR</sub></td>
+                <td>2CSE-105202 MATH II(P&amp;S) <sub>MAT-RR</sub></td>
+                <td>2CSE-100216 CE <sub>ENG-PKJ</sub></td>
+                <td>2CSE-100218 PP <sub>CSE-VK</sub></td>
+                <td></td>
+                <td>Spt &amp; Cul <sub>ENG-GR/CSE-PK/EEE-PB</sub></td>
+                <td>Spt &amp; Cul <sub>ENG-GR/CSE-PK/EEE-PB</sub></td>
+                <td></td>
+                </tr>
+        </tbody>
+    </table>
+</body>
+</html>

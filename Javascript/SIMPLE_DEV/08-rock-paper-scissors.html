@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Rock Paper Scissors</title>
+</head>
+
+<body>
+    <h2>Rock Paper Scissors</h2>
+
+    <!-- Rock -->
+    <button class="btn btn1" onclick="
+        getResult('Rock');
+    ">Rock</button>
+
+    <!-- Paper -->
+    <button class="btn btn2" onclick="
+        getResult('Paper');        
+        ">Paper</button>
+
+<!-- Scissors -->
+<button class="btn btn3" onclick="
+        getResult('Scissors');
+        ">Scissors</button>
+
+<!-- Reset Button -->
+<button onclick="reset(0)">Reset Score</button>
+
+<!-- Result Display
+<div id="result">Make your move!</div> -->
+
+<script>
+        let score = JSON.parse(localStorage.getItem('score')) || //It tries to read whatever is saved in localStorage under the key 'score' — even before you click any button.
+        {
+                    wins: 0,
+                    losses: 0,
+                    ties: 0
+                };   
+        
+                                function reset(reset) {
+                                    score.wins = reset;
+                                    score.losses = reset;
+                                    score.ties = reset;
+                                    localStorage.removeItem('score');
+                                    alert(` Wins: ${score.wins} Losses: ${score.losses} Ties: ${score.ties}`);
+                                }   
+
+function pickComputerMove() {
+    let computerMove = '';
+    const randomNumber = Math.random();
+    if (randomNumber >= 0 && randomNumber < 1 / 3) {
+        computerMove = 'Rock';
+    }
+    else if (randomNumber >= 1 / 3 && randomNumber < 2 / 3) {
+        computerMove = 'Paper';
+    }
+    else if (randomNumber >= 2 / 3 && randomNumber < 1) {
+        computerMove = 'Scissors';
+    }
+    console.log(randomNumber);
+    return computerMove;
+}
+
+                        function getResult(playerMove) {
+                            let computerMove = pickComputerMove();
+
+                            let result = '';
+                            if (playerMove === 'Rock') {
+                                if (computerMove === 'Rock') {
+                                    result = 'Tie.';
+                                } else if (computerMove === 'Paper') {
+                                    result = 'You Lose.';
+                                } else if (computerMove === 'Scissors') {
+                                    result = 'You Win.';
+                                }
+                            }
+                            else if (playerMove === 'Paper') {
+                                if (computerMove === 'Rock') {
+                                    result = 'You Win.';
+                                } else if (computerMove === 'Paper') {
+                                    result = 'Tie.';
+                                } else if (computerMove === 'Scissors') {
+                                    result = 'You Lose.';
+                                }
+                            }
+                            else if (playerMove === 'Scissors') {
+                                if (computerMove === 'Rock') {
+                                    result = 'You Lose.';
+                                } else if (computerMove === 'Paper') {
+                                    result = 'You Win.';
+                                } else if (computerMove === 'Scissors') {
+                                    result = 'Tie.';
+                                }
+                            }
+                            // document.getElementById('result').innerHTML = result;
+                            if (result === 'You Win.')
+                                score.wins++;
+                            else if (result === 'You Lose.')
+                                score.losses++;
+                            else
+                                score.ties++;
+
+                            localStorage.setItem('score',JSON.stringify(score));
+                            console.log(score);
+
+alert(`You picked ${playerMove}.Computer picked ${computerMove}.${result} 
+Wins: ${score.wins} Losses: ${score.losses} Ties: ${score.ties}`);
+                        }
+    </script>
+</body>
+
+</html>

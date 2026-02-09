@@ -1,0 +1,8 @@
+{
+    "files.associations": {
+        "CHARACTER_ARRAY.C": "cpp",
+        "CHARACTER_ARRAY_1.C": "cpp",
+        "READ_CHARACTER.C": "cpp",
+        "PRINT_CHARACTER.C": "cpp"
+    }
+}

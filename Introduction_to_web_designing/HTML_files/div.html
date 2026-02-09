@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Div</title>
+    <style>
+        .main {
+            width: 350px;
+            height: 475px;
+            background-color: aqua;
+        }
+
+        #parent-row1 {
+            width: 250px;
+            height: 125px;
+            background-color: red;
+        }
+
+        #parent-row2 {
+            width: 250px;
+            height: 125px;
+            background-color: yellow;
+        }
+
+        #parent-row3 {
+            width: 250px;
+            height: 125px;
+            background-color: rgb(90, 62, 12);
+        }
+
+        .chidren-box1 {
+            width: 125px;
+            height: 125px;
+            background-color: blue;
+            float: left;
+            text-align: center;
+            text-decoration:underline;
+            font-style: oblique;
+        }
+
+        .chidren-box2 {
+            width: 125px;
+            height: 125px;
+            background-color: violet;
+            float: left;
+            text-align: center;
+        }
+
+        .chidren-box3 {
+            width: 125px;
+            height: 125px;
+            background-color: magenta;
+            float: left;
+            text-align: center;
+        }
+
+        .chidren-box4 {
+            width: 125px;
+            height: 125px;
+            background-color: springgreen;
+            float: left;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="main">
+
+        <div id="parent-row1">
+            <div class="chidren-box1">Home</div>
+
+            <div class="chidren-box2">About</div>
+        </div>
+
+        <div id="parent-row2">
+            <div class="chidren-box3">Course</div>
+            <div class="chidren-box4">Batch</div>
+        </div>
+
+        <div id="parent-row3">
+            <div class="chidren-box1">Contact</div>
+            <div class="chidren-box2">Phone</div>
+        </div>
+
+    </div>
+</body>
+
+</html>

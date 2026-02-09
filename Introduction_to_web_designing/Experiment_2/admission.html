@@ -1,0 +1,107 @@
+<!-- Create a Hyperlink in the homepage connecting it to 3 different pages.
+
+ii. Design a time-table and display it in a tabular format.
+
+iii. Design an admission form for any course in your college with:
+Text fields
+Password fields
+Drop-down list
+Check-boxes
+Radio buttons
+Submit button
+Reset button -->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Admission Form</title>
+    <style>
+        /* form {
+            align-content: center;
+            height: 100%;
+            width: 680px;
+            margin: auto;
+            padding: 10px;
+        } */
+    </style>
+</head>
+
+<body>
+    <form style="align-content: center;height: 100%;width: 680px;margin: auto;padding: 10px;">
+        <fieldset>
+            <legend>Admission Form</legend>
+            <p>If you'd like to apply for admission, please fill out the form below and we will contact you as soon as
+                possible:</p>
+            <label for="Student's name">Student's name:</label>
+            <input type="text" id="Student's name" name="Student's name" required placeholder="First name">
+            <input type="text" name="Student's Middle name" placeholder="Middle name">
+            <input type="text" name="Student's Last name" required placeholder="Last name">
+            <br><br>
+
+            <label for="Father's name">Father's name:</label>
+            <input type="text" id="Father's name" name="Father's name" required placeholder="First name">
+            <input type="text" name="Father's Middle name" placeholder="Middle name">
+            <input type="text" name="Father's Last name" required placeholder="Last name">
+            <br><br>
+
+            <label for="dob">D.O.B:</label>
+            <input type="date" id="dob" name="dob" required>
+            <br><br>
+
+            <label for="phone number">Phone Number:</label>
+            <input type="tel" id="phone number" name="phone number" required placeholder="123-456-7890">
+            <br><br>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required placeholder="abc123@example.com"><br><br>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required><br><br>
+
+            <label>Gender:</label>
+            <input type="radio" id="male" name="gender" value="male">
+            <label for="male">Male</label>
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="female">Female</label>
+            <input type="radio" id="other" name="gender" value="other">
+            <label for="other">Other</label><br><br>
+
+            <label for="course">Select Course:</label>
+            <select id="course" name="course">
+                <option value="Select">Please select a course</option>
+                <option value="B.Tech">B.Tech</option>
+                <option value="BBA">BBA</option>
+                <option value="BCA">BCA</option>
+            </select><br><br>
+            <label for="branch">Branch:</label>
+            <input type="checkbox" name="branch" id="CSE" value="CSE">
+            <label for="CSE">CSE</label>
+            <input type="checkbox" name="branch" id="EEE" value="EEE">
+            <label for="EEE">EEE</label>
+            <input type="checkbox" name="branch" id="ME" value="ME">
+            <label for="ME">ME</label>
+            <input type="checkbox" name="branch" id="ECE" value="ECE">
+            <label for="ECE">ECE</label>
+            <input type="checkbox" name="branch" id="none" value="none">
+            <label for="none">NONE</label>
+            <br><br>
+
+            <label for="profile picture">Profile Picture:</label>
+            <input type="file" id="profile picture" name="profile picture">
+            <br><br>
+            <label for="address">Address:</label>
+            <br>
+            <textarea id="address" name="address" required placeholder="Enter your address" cols="20" rows="1"></textarea>
+            <br><br>
+
+
+            <input type="checkbox" id="terms" name="terms" required>
+            <label for="terms">I agree to the terms and conditions.</label>
+            <br><br>
+            <input type="submit" value="Submit">
+            <input type="reset" value="Reset">
+        </fieldset>
+    </form>
+</body>
+
+</html>

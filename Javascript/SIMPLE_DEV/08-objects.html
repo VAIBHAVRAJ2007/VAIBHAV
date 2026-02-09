@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objects</title>
+</head>
+<body>
+    <script>
+      /* 
+        const product = {
+            name: 'socks',
+            price: 109,
+            'delivery-time' : 1,
+            rating: {
+                stars:4.5,
+                count:60
+            },
+            fun: function function1(){
+                productName='function inside object';
+                console.log(productName);
+                console.log(typeof console.log);
+            }
+        };
+        console.log(product);
+        // console.log(product.name);
+        // console.log(product.price);
+        product.name='shirt';
+        console.log(product);
+        product.newProperty='Color';
+        // console.log(product);
+        // delete product.newProperty;
+        // console.log(product);
+        document.write(product['newProperty']);
+        document.write('<br>')
+        document.write(product['delivery-time']);
+        document.write('<br>')
+        document.write(product['delivery-time']);
+        document.write('<br>')
+        // document.write(product);  //not working
+        console.log(product.rating['count']);
+        console.log(product.rating.stars);
+        product.fun();
+
+        const json = (JSON.stringify(product));
+        console.log(json);
+        document.write(json);
+        console.log(JSON.parse(json));
+        */
+
+        // console.log('Vaibhav'.length);
+        // console.log('Vaibhav'.endsWith('v'));
+
+        const object1={
+            message:'hello'
+        };
+        const object2=object1;
+
+        object1.message='Good job!';
+        console.log(object2);
+
+        const object3={
+            message:'Good job!'
+        };
+        console.log(object3===object1)
+        console.log(object2===object1)
+
+    </script>
+</body>
+</html>

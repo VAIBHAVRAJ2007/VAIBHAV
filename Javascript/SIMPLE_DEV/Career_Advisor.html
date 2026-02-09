@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Career Advisor</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f3f4f6;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 min-h-screen flex items-center justify-center p-4">
+
+    <div class="bg-white rounded-3xl shadow-xl w-full max-w-4xl p-8 md:p-12 space-y-8">
+
+        <!-- Header -->
+        <div class="text-center">
+            <h1 class="text-4xl font-bold text-gray-900">Your AI Career Advisor</h1>
+            <p class="mt-2 text-lg text-gray-500">
+                Map your skills, find your path, and prepare for the future of work.
+            </p>
+        </div>
+
+        <!-- Skills Input Section -->
+        <div class="space-y-4">
+            <h2 class="text-2xl font-semibold text-gray-800">1. Enter Your Skills & Interests</h2>
+            <div class="relative">
+                <textarea id="skillsInput" rows="6" class="w-full p-4 text-gray-700 bg-gray-50 border border-gray-300 rounded-xl focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition-all duration-300" placeholder="e.g., Python, Data Analysis, Public Speaking, Creative Writing, Team Leadership, Problem-solving..."></textarea>
+            </div>
+            <button id="generateBtn" class="w-full px-6 py-3 text-lg font-semibold text-white bg-indigo-600 rounded-xl shadow-lg hover:bg-indigo-700 transition-all duration-300 ease-in-out transform hover:scale-105">
+                Generate My Career Paths
+            </button>
+            <div id="loadingIndicator" class="hidden text-center text-indigo-600 font-medium">
+                Thinking... please wait.
+            </div>
+        </div>
+
+        <!-- Recommendations Section -->
+        <div id="recommendationsSection" class="hidden space-y-6">
+            <h2 class="text-2xl font-semibold text-gray-800">2. Recommended Career Paths</h2>
+            <div id="careerPathsContainer" class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Career paths will be dynamically inserted here -->
+            </div>
+        </div>
+        
+        <!-- Job Prep Toolkit Section -->
+        <div id="toolkitSection" class="hidden space-y-6">
+            <h2 class="text-2xl font-semibold text-gray-800">3. Job Prep Toolkit</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                
+                <!-- Mock Interview Card -->
+                <div class="bg-white rounded-xl shadow-md p-6 border border-gray-200 hover:shadow-lg transition-shadow duration-300">
+                    <h3 class="text-xl font-bold text-gray-800">AI Mock Interview</h3>
+                    <p class="mt-2 text-gray-600">Practice with a virtual interviewer and get instant feedback on your answers.</p>
+                    <button class="mt-4 w-full px-4 py-2 bg-pink-500 text-white font-medium rounded-lg hover:bg-pink-600 transition-colors duration-300">
+                        Start Interview
+                    </button>
+                </div>
+                
+                <!-- Resume Review Card -->
+                <div class="bg-white rounded-xl shadow-md p-6 border border-gray-200 hover:shadow-lg transition-shadow duration-300">
+                    <h3 class="text-xl font-bold text-gray-800">Resume & ATS Review</h3>
+                    <p class="mt-2 text-gray-600">Analyze your resume against job descriptions to pass Applicant Tracking Systems.</p>
+                    <button class="mt-4 w-full px-4 py-2 bg-purple-500 text-white font-medium rounded-lg hover:bg-purple-600 transition-colors duration-300">
+                        Upload Resume
+                    </button>
+                </div>
+                
+                <!-- Market Analysis Card -->
+                <div class="bg-white rounded-xl shadow-md p-6 border border-gray-200 hover:shadow-lg transition-shadow duration-300">
+                    <h3 class="text-xl font-bold text-gray-800">Job Market Insights</h3>
+                    <p class="mt-2 text-gray-600">Get up-to-date data on salary trends, job demand, and emerging roles.</p>
+                    <button class="mt-4 w-full px-4 py-2 bg-sky-500 text-white font-medium rounded-lg hover:bg-sky-600 transition-colors duration-300">
+                        View Insights
+                    </button>
+                </div>
+
+            </div>
+        </div>
+        
+        <!-- Message Box for Alerts (to replace alert()) -->
+        <div id="messageBox" class="hidden fixed inset-0 flex items-center justify-center bg-gray-900 bg-opacity-50 z-50">
+            <div class="bg-white rounded-xl p-8 shadow-2xl max-w-sm w-full space-y-4">
+                <h3 id="messageTitle" class="text-xl font-bold text-gray-800"></h3>
+                <p id="messageContent" class="text-gray-600"></p>
+                <button id="messageCloseBtn" class="w-full px-4 py-2 bg-indigo-600 text-white font-medium rounded-lg hover:bg-indigo-700 transition-colors duration-300">OK</button>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const generateBtn = document.getElementById('generateBtn');
+            const skillsInput = document.getElementById('skillsInput');
+            const recommendationsSection = document.getElementById('recommendationsSection');
+            const toolkitSection = document.getElementById('toolkitSection');
+            const careerPathsContainer = document.getElementById('careerPathsContainer');
+            const loadingIndicator = document.getElementById('loadingIndicator');
+
+            // Message box elements
+            const messageBox = document.getElementById('messageBox');
+            const messageTitle = document.getElementById('messageTitle');
+            const messageContent = document.getElementById('messageContent');
+            const messageCloseBtn = document.getElementById('messageCloseBtn');
+
+            function showMessage(title, message) {
+                messageTitle.textContent = title;
+                messageContent.textContent = message;
+                messageBox.classList.remove('hidden');
+            }
+
+            messageCloseBtn.addEventListener('click', () => {
+                messageBox.classList.add('hidden');
+            });
+            
+            generateBtn.addEventListener('click', async () => {
+                const userSkills = skillsInput.value.trim();
+                
+                if (!userSkills) {
+                    showMessage('Input Required', 'Please enter your skills and interests to get started.');
+                    return;
+                }
+
+                generateBtn.disabled = true;
+                generateBtn.textContent = 'Generating...';
+                loadingIndicator.classList.remove('hidden');
+                
+                // --- LLM API Call Simulation ---
+                // The following code simulates a call to a Gemini API endpoint to generate content.
+                // In a real application, this would send the user's skills to a backend.
+                // We're using a placeholder structure to show how it would be implemented.
+
+                const payload = {
+                    contents: [{
+                        parts: [{
+                            text: `As a career advisor, analyze the following skills and interests and recommend 3 potential career paths for a student. For each path, provide the job title, a 2-3 sentence description, and a "match score" from 1-100. The skills are: "${userSkills}"`
+                        }]
+                    }],
+                    tools: [{ "google_search": {} }],
+                    systemInstruction: {
+                        parts: [{ text: "Act as a world-class AI career advisor for students. Your goal is to provide inspiring and practical career path recommendations based on a student's skills and interests. Your response must be in JSON format with a specific schema. Do not include any text outside of the JSON object." }]
+                    },
+                    generationConfig: {
+                        responseMimeType: "application/json",
+                        responseSchema: {
+                            type: "ARRAY",
+                            items: {
+                                type: "OBJECT",
+                                properties: {
+                                    "careerTitle": { "type": "STRING" },
+                                    "description": { "type": "STRING" },
+                                    "matchScore": { "type": "NUMBER" }
+                                },
+                                propertyOrdering: ["careerTitle", "description", "matchScore"]
+                            }
+                        }
+                    }
+                };
+
+                const apiKey = ""; 
+                const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-05-20:generateContent?key=${apiKey}`;
+                
+                let recommendations = [];
+                try {
+                    const response = await fetch(apiUrl, {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify(payload)
+                    });
+
+                    if (!response.ok) {
+                        throw new Error(`API call failed with status: ${response.status}`);
+                    }
+                    
+                    const result = await response.json();
+                    const candidate = result.candidates?.[0];
+                    if (candidate && candidate.content?.parts?.[0]?.text) {
+                        const jsonText = candidate.content.parts[0].text;
+                        recommendations = JSON.parse(jsonText);
+                    } else {
+                        // Fallback to mock data if API call fails
+                        recommendations = getMockRecommendations(userSkills);
+                    }
+                } catch (error) {
+                    console.error("Error fetching career recommendations from API, using mock data.", error);
+                    // Fallback to mock data if there's an issue with the fetch call
+                    recommendations = getMockRecommendations(userSkills);
+                }
+                
+                // --- End of LLM API Call Simulation ---
+
+                renderRecommendations(recommendations);
+                
+                generateBtn.disabled = false;
+                generateBtn.textContent = 'Generate My Career Paths';
+                loadingIndicator.classList.add('hidden');
+            });
+
+            function getMockRecommendations(skills) {
+                // Generate a consistent, but still dynamic, mock response
+                const hash = skills.split('').reduce((acc, char) => acc + char.charCodeAt(0), 0);
+                const score1 = 85 + (hash % 10);
+                const score2 = 75 + (hash % 15);
+                const score3 = 60 + (hash % 20);
+
+                return [
+                    {
+                        careerTitle: "Data Scientist",
+                        description: "Analyzes and interprets complex digital data to help organizations make better decisions. This path requires a strong foundation in math, statistics, and programming.",
+                        matchScore: score1 > 100 ? 98 : score1
+                    },
+                    {
+                        careerTitle: "UX/UI Designer",
+                        description: "Focuses on creating intuitive and user-friendly interfaces for websites and applications. This role blends creativity with an understanding of human-computer interaction.",
+                        matchScore: score2 > 100 ? 89 : score2
+                    },
+                    {
+                        careerTitle: "Project Manager",
+                        description: "Leads a team to deliver a project on time and within budget. This career is ideal for those who excel at organization, communication, and problem-solving.",
+                        matchScore: score3 > 100 ? 78 : score3
+                    }
+                ];
+            }
+
+            function renderRecommendations(paths) {
+                careerPathsContainer.innerHTML = ''; // Clear previous results
+                paths.forEach(path => {
+                    const pathCard = document.createElement('div');
+                    pathCard.className = "bg-white rounded-xl shadow-md p-6 border border-gray-200 hover:shadow-lg transition-shadow duration-300 space-y-3";
+                    pathCard.innerHTML = `
+                        <h3 class="text-xl font-bold text-gray-800">${path.careerTitle}</h3>
+                        <div class="flex items-center space-x-2">
+                            <div class="w-full bg-gray-200 rounded-full h-2.5">
+                                <div class="bg-indigo-600 h-2.5 rounded-full" style="width: ${path.matchScore}%;"></div>
+                            </div>
+                            <span class="text-sm font-semibold text-gray-700">${path.matchScore}% Match</span>
+                        </div>
+                        <p class="text-gray-600 text-sm">${path.description}</p>
+                        <button class="w-full px-4 py-2 bg-indigo-500 text-white font-medium rounded-lg hover:bg-indigo-600 transition-colors duration-300">
+                            Explore This Path
+                        </button>
+                    `;
+                    careerPathsContainer.appendChild(pathCard);
+                });
+                
+                recommendationsSection.classList.remove('hidden');
+                toolkitSection.classList.remove('hidden');
+            }
+        });
+    </script>
+
+</body>
+</html>

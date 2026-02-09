@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Factorial</title>
+</head>
+<body>
+        <h1>Factorial of a Number</h1>
+        Enter a number:<input type="number" id="num">
+        <br><br>
+        <button onclick="findFactorial()">Find Factorial</button>
+        <h3 id="display"></h3>
+
+    <script>
+        function findFactorial() {
+            let n = Number(document.getElementById("num").value);
+
+            if (n < 0) {
+                document.getElementById("display").innerText = "Factorial is not defined for negative numbers.";
+                return;
+            }
+
+            let answer = fact(n);
+            document.getElementById("display").innerText = "Factorial of " + n + " is " + answer;
+        }
+
+        function fact(n) {
+            if (n == 0 || n == 1)
+                return 1;
+            else
+                return n * fact(n - 1);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Switch-Case</title>
+</head>
+
+<body>
+    <h1 id="demo"></h1>
+    <script>
+        let w = 3;
+        switch (w) {
+            case 1:
+                w = 'Monday';
+                break;
+            case 2:
+                w = 'Tuesday';
+                break;
+            case 3:
+                w = 'Wednesday';
+                break;
+            case 4:
+                w = 'Thursday';
+                break;
+            case 5:
+                w = 'Friday';
+                break;
+            default:
+                w = 'Weekend';
+                break;
+        }
+        document.getElementById("demo").innerHTML = "Today is "+w;
+    </script>
+</body>
+
+</html>

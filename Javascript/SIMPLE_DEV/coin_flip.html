@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coin-flip Game</title>
+</head>
+<body>
+    Choose: <input type="text" id="choose">
+    <br>
+    <br>
+    <button onclick="pass()">Guess</button>
+    <h2 id="display"></h2>
+    <script>
+        function pass(){
+
+        let random=Math.random();
+        let guess=document.getElementById("choose").value;
+
+        // if(random<0.5)
+        //     result='tails';
+        // else
+        //     result='heads';
+        let result=random<0.5?'heads':'tails';
+
+        if (guess === "heads" || guess === "tails") {
+                if (guess === result) {
+                    document.getElementById("display").innerText = "🎉 You Win! Coin was " + result;
+                } else {
+                    document.getElementById("display").innerText = "❌ You Lose! Coin was " + result;
+                }
+            } else {
+                document.getElementById("display").innerText = "⚠️ Please enter '>heads' or 'tails'";
+            }
+        }
+
+        
+    </script>
+</body>
+</html>

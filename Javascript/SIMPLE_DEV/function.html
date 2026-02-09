@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Function</title>
+    <style>
+        #btn {
+            background-color: maroon;
+            height: 110px;
+            width: 300px;
+            margin: auto;
+            display: flex; /*flex_box*/
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .bg {
+            border: 2px solid blue;
+            border-radius: 5px;
+            color: rgb(32, 168, 196);
+            background-color: rgb(180, 59, 89);
+            margin: 10px;
+            
+        }
+
+        :hover.bg {
+            background-color: rgb(27, 160, 51);
+            color: red;
+            border: 2px solid rgb(47, 139, 114);
+        }
+
+        .page {
+            border: 2px solid;
+            border-radius: 5px;
+            color: magenta;
+            background-color: blueviolet;
+            margin: 10px;
+        }
+
+        :hover.page {
+            border: 2px solid red;
+            background-color: cadetblue;
+        }
+
+        .ad {
+            border: 2px solid gold;
+            border-radius: 5px;
+            color: rgba(224, 227, 239, 0.87);
+            background-color: rgba(4, 146, 54, 0.869);
+            margin: 10px;
+        }
+
+        .ad:hover {
+            background-color: rgb(13, 78, 191);
+            color: red;
+            border: 2px solid rgb(200, 16, 46);
+        }
+    </style>
+</head>
+
+<body>
+    <div id="btn">
+        <div >
+            <button onclick="mycolor()" class="bg">Background Color</button>
+        </div>
+        <div>
+            <button onclick="webpage()" class="page">Webpage</button>
+        </div>
+        <div>
+        <button onclick="add(1,2)" class="ad">Click to Add</button>
+        </div>
+        </div>
+    <script>
+        function mycolor() {
+            document.bgColor = "pink";
+        }
+        function webpage() {
+            open("https://www.coursera.org/");
+        }
+        function add(a, b) {
+            add = a + b;
+            document.write(add);
+        }
+    </script>
+</body>
+
+</html>

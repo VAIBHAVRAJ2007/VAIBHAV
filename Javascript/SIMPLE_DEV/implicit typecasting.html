@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Implicit Typecasting</title>
+  </head>
+
+  <body>
+    <script>
+      //Number to string
+      let num = 10;
+      let str = num + " " + "apples";
+      document.write(typeof str); //string
+      document.write("<br>");
+      document.write(str); // "10 apples" (number converted to string)
+
+      document.write("<br>");
+
+      // String to number
+      let result = 5 - "9";
+      document.write(typeof result); // number
+      document.write("<br>");
+      document.write(result); // 3 (string converted to number)
+
+      document.write("<br>");
+
+      //boolean to number
+      document.write(true + 2); // 3 (true becomes 1)
+      document.write("<br>");
+      document.write(false + 2); // 2 (false becomes 0)
+
+      //Null to number
+      document.write("<br>");
+      document.write(null + 5); // 5 (null becomes 0)
+    </script>
+  </body>
+</html>

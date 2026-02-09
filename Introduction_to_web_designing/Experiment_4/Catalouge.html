@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>ElectroCart</title>
+    <style>
+        body {
+            font-family: system-ui;
+            margin: 24px
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            gap: 16px
+        }
+
+        .card {
+            border: 1px solid #ddd;
+            border-radius: 12px;
+            padding: 12px
+        }
+
+        .card img {
+            width: 100%;
+            height: 120px;
+            object-fit: cover;
+            border-radius: 8px
+        }
+
+        .price {
+            font-weight: 700;
+            margin-top: 6px
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 8px;
+            padding: 6px 10px;
+            border-radius: 8px;
+            background: #005bbb;
+            color: #fff;
+            text-decoration: none
+        }
+    </style>
+</head>
+
+<body>
+    <h2>ElectroCart – Catalogue</h2>
+    <div class="grid">
+        <div class="card"><img src="pic1.jpg">
+            <h4>Smartphone X</h4>
+            <div class="price">₹19,999</div><a class="btn" href="#">Add</a>
+        </div>
+        <div class="card"><img src="pic2.jpg">
+            <h4>Laptop Pro</h4>
+            <div class="price">₹54,999</div><a class="btn" href="#">Add</a>
+        </div>
+        <div class="card"><img src="pic3.jpg">
+            <h4>Wireless Buds</h4>
+            <div class="price">₹1,999</div><a class="btn" href="#">Add</a>
+        </div>
+    </div>
+</body>
+
+</html>

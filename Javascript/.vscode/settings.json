@@ -1,0 +1,10 @@
+{
+    "accessibility.accessibleView.closeOnKeyPress": false,
+    "accessibility.hideAccessibleView": true,
+    "terminal.integrated.accessibleViewPreserveCursorPosition": true,
+    "editor.find.cursorMoveOnType": true,
+    "terminal.integrated.altClickMovesCursor": true,
+    "terminal.integrated.cursorBlinking": false,
+    "terminal.integrated.tabs.focusMode": "singleClick",
+    "terminal.integrated.accessibleViewFocusOnCommandExecution": false
+}

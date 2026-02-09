@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Student Form</title>
+    <style>
+        body {
+            font-family: system-ui;
+            background: #f9fafb
+        }
+
+        form {
+            max-width: 480px;
+            margin: 24px auto;
+            padding: 16px;
+            background: #fff;
+            border: 1px solid #e5e7eb;
+            border-radius: 12px
+        }
+
+        label {
+            display: block;
+            margin-top: 10px
+        }
+
+        input,
+        select,
+        textarea {
+            width: 100%;
+            padding: 8px;
+            margin-top: 6px;
+            border: 1px solid #ccc;
+            border-radius: 8px
+        }
+
+        button {
+            margin-top: 14px;
+            padding: 10px 14px;
+            border: 0;
+            border-radius: 10px;
+            background: #0b5;
+            color: #fff
+        }
+    </style>
+</head>
+
+<body>
+    <form>
+        <h2>Student Information</h2>
+        <label>Name <input required></label>
+        <label>Roll No <input type="text" required></label>
+        <label>Email <input type="email"></label>
+        <label>Branch
+            <select>
+                <option>CSE</option>
+                <option>ECE</option>
+                <option>ME</option>
+                <option>CE</option>
+            </select>
+        </label>
+        <label>Address <textarea rows="3"></textarea></label>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+
+</html>

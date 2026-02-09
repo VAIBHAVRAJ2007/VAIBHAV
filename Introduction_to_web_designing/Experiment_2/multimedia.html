@@ -1,0 +1,51 @@
+<!-- Design a webpage using HTML that includes an image map, and embeds audio and video. -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Multimedia</title>
+    <style>
+
+        /* .image-map {
+            width: 100%;
+            height: auto;
+        } */
+    </style>
+</head>
+
+<body style="font-family: Arial; text-align: center;">
+    <h1>Video</h1>
+    <p>Video is embedded below:</p>
+    <video controls height="500px" width="900px" muted autoplay preload="auto" style="margin: 10px 0;">
+        <source src="video.mp4" type="video/mp4" />
+    </video>
+
+    <h1>Audio</h1>
+    <p>Audio is embedded below:</p>
+    <audio controls preload="auto" autoplay muted style="margin: 20px 0;">
+        <source src="audio.mp3" type="audio/mp3" />
+    </audio>
+    
+    <h1>Image Maps</h1>
+    <p>Image map is embedded below:</p>
+    <p>Click on the laptop, the phone, books, and the cup ot tea to learn more.</p>
+    <img src="picture.jpeg" alt="workplace" height="233px" width="350px" usemap="#workplace">
+    <map name="workplace">
+        <area shape="poly" coords="157,142,194,123,257,187,217,212" href="https://www.yarooms.com/blog/mobile-first-workplace"
+            alt="Online Mobile Store" target="_blank">
+
+        <area shape="poly" coords="0,35,70,10,105,135,185,231,0,232" href="https://www.mspblueshift.com.au/insights/the-benefits-of-a-laptop-in-a-workstation/"
+            alt="Online Laptop Store" target="_blank">
+
+        <area shape="poly" coords="200,83,275,37,349,100,280,156" href="https://www.td.org/content/atd-blog/harnessing-the-power-of-books-in-the-workplace"
+            alt="Online Book Store" target="_blank">
+
+        <area shape="circle" coords="149,63,25" href="https://foodtank.com/news/2017/11/sustainable-tea-industry/"
+            alt="Online Tea Store" target="_blank">
+            
+        <area shape="circle" coords="147,101,36" href="https://foodtank.com/news/2017/11/sustainable-tea-industry/"
+            alt="Online Tea Store" target="_blank">
+    </map>
+</body>
+
+</html>

@@ -1,0 +1,29 @@
+{
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnPaste": true,
+  "editor.formatOnSave": true,
+  "editor.formatOnType": true,
+  "files.associations": {
+    "stdio.h": "c",
+    "READ_CHARACTER.C": "cpp",
+    "CHARACTER_ARRAY_1.C": "cpp",
+    "PRINT_CHARACTER.C": "cpp"
+  },
+  "files.autoSave": "afterDelay",
+  "[c]": {
+    "editor.defaultFormatter": "ms-vscode.cpptools"
+  },
+  "cSpell.words": [
+    "myfunc",
+    "Vaibhav",
+    "VVIT"
+  ],
+  "python.terminal.focusAfterLaunch": true,
+  "code-runner.runInTerminal": true,
+  "terminal.integrated.cursorBlinking": true,
+  "[html]": {
+    "editor.defaultFormatter": "vscode.html-language-features"
+  },
+  "editor.wordWrap": "on",
+  "liveServer.settings.CustomBrowser": "chrome"
+}

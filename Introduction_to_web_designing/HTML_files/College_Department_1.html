@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>College and Clinic Info</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f8fb;
+        }
+
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+        }
+
+        h2,
+        h3,
+        h4 {
+            color: #34495e;
+        }
+
+        nav ul {
+            background-color: #2c3e50;
+            padding: 10px;
+            display: flex;
+            list-style-type: none;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: #ecf0f1;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav ul li a:hover {
+            color: #1abc9c;
+        }
+
+        section {
+            margin-bottom: 30px;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        img {
+            width: 100%;
+            max-width: 600px;
+            border-radius: 8px;
+        }
+
+        footer {
+            background-color: #2c3e50;
+            color: #ecf0f1;
+            padding: 20px;
+            text-align: center;
+        }
+
+        footer a {
+            color: #1abc9c;
+            margin: 0 8px;
+            text-decoration: none;
+        }
+
+        marquee {
+            font-weight: bold;
+            font-size: 1.1em;
+            color: #e74c3c;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a href="#college">College Info</a></li>
+            <li><a href="#clinic">Clinic Info</a></li>
+            <li><a href="#location">Location</a></li>
+        </ul>
+    </nav>
+
+    <!-- College Homepage -->
+    <section id="college">
+        <h1>VIDYA VIHAR INSTITUTE OF TECHNOLOGY</h1>
+        <h3>Departments in our college are:</h3>
+        <ol>
+            <li><b>B.Tech</b>
+                <ul type="circle">
+                    <li>Bachelor of Technology (B.Tech) – a 4-year engineering degree:</li>
+                    <ul type="square">
+                        <li>Computer Science Engineering (CSE)</li>
+                        <li>Electrical and Electronics Engineering (EEE)</li>
+                        <li>Mechanical Engineering (ME)</li>
+                        <li>Electronics and Communication Engineering (ECE)</li>
+                    </ul>
+                </ul>
+                <h4>Faculty Members</h4>
+                <ul>
+                    <li>Dr Hemant Kumar (Ph.D)</li>
+                    <li>Om Prakash Singh (M.Tech)</li>
+                    <li>Shirshendu Ray (M.Tech)</li>
+                    <li>Er. Pallavi (M.Tech)</li>
+                </ul>
+            </li>
+
+            <li><b>BBA</b>
+                <ul type="circle">
+                    <li>Three-year undergraduate program in business administration.</li>
+                </ul>
+                <h4>Faculty Members</h4>
+                <ul>
+                    <li>Nirbhay Mishra (MBA)</li>
+                    <li>Durgeshwar Jha (MBA)</li>
+                    <li>Rohit Kumar Jha (MBA)</li>
+                    <li>Rahul Kumar (MBA)</li>
+                </ul>
+            </li>
+
+            <li><b>BCA</b>
+                <ul type="circle">
+                    <li>Three-year program in computer applications and software development.</li>
+                </ul>
+                <h4>Faculty Members</h4>
+                <ul>
+                    <li>Prasanjeet Ghosh (MCA + NET)</li>
+                    <li>Sanjay Kumar (MCA)</li>
+                    <li>Er. Ravi Kishor Singh (MCA)</li>
+                    <li>Abhishek Prasoon (M.Tech)</li>
+                </ul>
+            </li>
+        </ol>
+    </section>
+
+    <!-- Clinic Webpage -->
+    <section id="clinic">
+        <h1>ABC Health Clinic</h1>
+        <marquee behavior="scroll" direction="right">Welcome to ABC Clinic – Your Health, Our Priority!</marquee>
+        <p><b>Services:</b> <i>General Checkup</i>, <i>Dental Care</i>, <b><i>Eye Testing</i></b></p>
+    </section>
+
+    <!-- Image -->
+    <section>
+        <h2>Image</h2>
+        <img src="image.jpg" alt="College and Clinic Banner">
+    </section>
+
+    <!-- Location -->
+    <section id="location">
+        <h2>Location</h2>
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d57095.2812283357!2d87.43525526739141!3d25.761460684002913!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eff93ccbac7d77%3A0x2bc5530cf0eafdf1!2sDr.%20Osama%E2%80%99s%20Advanced%20Dental%20Clinic!5e0!3m2!1sen!2sin!4v1752163814473!5m2!1sen!2sin"
+            width="100%" height="300" style="border:0;" allowfullscreen
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 VIDYA VIHAR INSTITUTE OF TECHNOLOGY & ABC Health Clinic</p>
+        <p>Follow us:
+            <a href="#">Facebook</a> |
+            <a href="#">Instagram</a> |
+            <a href="#">LinkedIn</a>
+        </p>
+    </footer>
+</body>
+
+</html>

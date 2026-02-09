@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Object and Array</title>
+</head>
+
+<body>
+    <!-- <h1>Car Information</h1>
+    <script>
+        let car={
+            Name:"Fortuner",
+            Brand:"Toyota",
+            Year:2020,
+            Color:"White",
+        }
+        document.write(`Car Name: ${car.Name}<br>`);
+        document.write(`Car Color: ${car.Color}<br>`);
+        document.write(`Car Brand: ${car.Brand}<br>`);
+        document.write(`Car Year: ${car.Year}<br>`);
+    </script> -->
+    <h1>Subjects</h1>
+    <script>
+        let sub = ['Mathematics', 'Physics', 'Python', 'Chemistry', 'English'];
+        document.write(sub[3], '<br>');
+        sub[1] = 'IWD';
+
+        sub.push('Civics'); //Add element at end
+        document.write(sub, '<br>');
+
+        let pop=sub.pop(); //Remove element from end
+        document.write('Removed element: ',pop, '<br>');
+        document.write(sub, '<br>');
+
+        let shift=sub.shift(); //Remove element from beginning
+        document.write('Removed element: ',shift, '<br>');
+        document.write(sub, '<br>');
+
+        sub.unshift('Biology');//Add element at beginning
+        document.write(sub, '<br>');
+
+        let check = sub.includes('IWD');
+        console.log(check);//Check if element exists
+
+        let marks = [50, 60, 70, 65, 55];
+        let result = sub.concat(marks); //Join two arrays
+        document.write(result, '<br>');
+        
+        console.log(marks.reverse());
+        let sort=marks.sort((a, b) => a - b);
+        console.log(sort);
+        
+    </script>
+</body>
+
+</html>
